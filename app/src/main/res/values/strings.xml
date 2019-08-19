@@ -9,7 +9,7 @@
     <string name="register">Register</string>
     <string name="update">Update</string>
     <string name="delete">Delete</string>
-    <string name="continuebtn">Continue</string>
+    <string name="continuebtn">Save and Continue</string>
     <string name="loginbtn">Login</string>
     <string name="alreadyMember">Already a member?</string>
     <string name="NotMember">Not a member?</string>
