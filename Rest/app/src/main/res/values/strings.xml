@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Rest</string>
+    <string name="get_new_quatation">Get new Quatation</string>
+    <string name="oK">ok</string>
+    <string name="main_course">Main Course</string>
+    <string name="desert">Desert</string>
+    <string name="beverages">Beverages</string>
+    <string name="take_away">Take away</string>
+    <string name="quantity">Quantity</string>
+</resources>
