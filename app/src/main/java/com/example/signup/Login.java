@@ -5,13 +5,27 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
+
+    EditText password, username;
+    Button login, register;
+    DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        db = new DatabaseHelper(this);
+
+        username = findViewById(R.id.txtUsername2);
+        password = findViewById(R.id.txtPassword2);
+
+        login = findViewById(R.id.btnLogin);
+        register = findViewById(R.id.btnRegister);
     }
 
     public void register(View view)
@@ -22,7 +36,18 @@ public class Login extends AppCompatActivity {
 
     public void login(View view)
     {
-        Intent intent = new Intent(this, home_page.class);
-        startActivity(intent);
+        String usrname = username.getText().toString();
+        String pass = password.getText().toString();
+
+        Boolean chkUsernamePassword = db.usernamePassword(usrname, pass);
+
+        if (chkUsernamePassword == true){
+            Intent intent = new Intent(this, home_page.class);
+            startActivity(intent);
+        }else{
+            Toast.makeText(getApplicationContext(),"Username or password is incorrect",Toast.LENGTH_SHORT).show();
+        }
+
+
     }
 }

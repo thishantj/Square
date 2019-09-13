@@ -9,7 +9,6 @@
     <string name="register">Register</string>
     <string name="update">Update</string>
     <string name="delete">Delete</string>
-    <string name="continuebtn">Save and Continue</string>
     <string name="loginbtn">Login</string>
     <string name="alreadyMember">Already a member?</string>
     <string name="NotMember">Not a member?</string>
@@ -31,4 +30,5 @@
     <string name="reserve">Reservation</string>
     <string name="user">User Profile</string>
     <string name="quotation">Quotation</string>
+    <string name="home">Home</string>
 </resources>
