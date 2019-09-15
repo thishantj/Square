@@ -1,0 +1,32 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+
+
+    <style name = "Text">
+    <item name = "android:textColor">#1E7A40</item>
+    <item name = "android:fontFamily">Rockwell</item>
+    <item name = "android:textSize">28dp</item>
+    <item name = "android:textAlignment">center</item>
+    </style>
+
+    <style name = "Text1">
+    <item name = "android:textColor">#1E7A40</item>
+    <item name = "android:fontFamily">Rockwell</item>
+    <item name = "android:textSize">20sp</item>
+    <item name = "android:textAlignment">center</item>
+    </style>
+
+</resources>
