@@ -10,7 +10,7 @@ public class page2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page2);
         //
-        //
+        //test app push
         
     }
 }
