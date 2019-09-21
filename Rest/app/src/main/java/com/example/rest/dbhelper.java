@@ -14,7 +14,8 @@ public class dbhelper extends SQLiteOpenHelper {
 
     public dbhelper(Context context) {
         super(context, DATABASE_NAME, null, 1);
-       // SQLiteDatabase  db = this.getWritableDatabase();////
+       // SQLiteDatabase  db = this.getWritableDatabase();
+       
        
     }
 
