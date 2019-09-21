@@ -10,35 +10,33 @@ import androidx.annotation.Nullable;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    public static final String DATABASE_NAME ="square.db";
-    public static final String TABLE_NAME ="user_table";
-    public static final String COL_1 ="NAME";
-    public static final String COL_2 ="ADDRESS";
-    public static final String COL_3 ="TEL";
-    public static final String COL_4 ="USERNAME";
-    public static final String COL_5 ="PASSWORD";
+    //public static final String DATABASE_NAME ="square.db";
+    public static final String TABLE_NAME ="user";
+    public static final String COL_1 ="name";
+    public static final String COL_2 ="address";
+    public static final String COL_3 ="tel";
+    public static final String COL_4 ="username";
+    public static final String COL_5 ="password";
 
 
 
     public DatabaseHelper(Context context) {
-        super(context, DATABASE_NAME, null, 1);
-        //find out database created or not
-        //SQLiteDatabase db = this.getWritableDatabase();
+        super(context, "square.db", null, 1);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE " + TABLE_NAME +"(NAME TEXT, ADDRESS TEXT, TEL INTEGER, USERNAME TEXT, PASSWORD TEXT)");
+        db.execSQL("create table user(name text, address text, tel integer, username text primary key, password text)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
-        db.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME);
-        onCreate(db);
+        db.execSQL("DROP TABLE IF EXISTS user");
+        //onCreate(db);
 
     }
 
-    public boolean insertData(String name, String address, String tel, String username, String password)
+    public boolean insertData(String name, String address, int tel, String username, String password)
     {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
@@ -62,7 +60,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 //        return cu;
 //    }
 
-    public boolean updateData(String name, String address, String tel, String username, String password)
+    public boolean updateData(String name, String address, int tel, String username, String password)
     {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();

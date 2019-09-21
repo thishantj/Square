@@ -13,6 +13,7 @@
         android:layout_height="41dp"
         android:background="@drawable/roundbtn3"
         android:fontFamily="sans-serif-black"
+        android:onClick="delete"
         android:text="@string/delete"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"

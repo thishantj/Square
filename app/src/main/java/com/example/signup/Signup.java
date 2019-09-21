@@ -29,7 +29,7 @@ public class Signup extends AppCompatActivity {
 
         db = new DatabaseHelper(this);
 
-        name = findViewById(R.id.txtName2);
+        name = findViewById(R.id.txtName);
         address = findViewById(R.id.txtAddress);
         tel = findViewById(R.id.txtTel);
         username = findViewById(R.id.txtUsername);
@@ -40,8 +40,7 @@ public class Signup extends AppCompatActivity {
         login = findViewById(R.id.btnLogin);
     }
 
-    public void register(View view)
-    {
+    public void register(View view) {
         String nme = name.getText().toString();
         String addr = address.getText().toString();
         String telephne = tel.getText().toString();
@@ -49,35 +48,38 @@ public class Signup extends AppCompatActivity {
         String pass = password.getText().toString();
         String cpass = confirmPass.getText().toString();
 
-        if(usrname.equals("") || nme.equals("") || addr.equals("") || telephne.equals("") || pass.equals("") ){
+        if (usrname.equals("") || nme.equals("") || addr.equals("") || telephne.equals("") || pass.equals("")) {
             Toast.makeText(getApplicationContext(), "Fields are empty", Toast.LENGTH_SHORT).show();
-        }else {
-           if (pass.equals(cpass)){
-               Boolean chkUsername = db.chkUsername(usrname);
-               if (chkUsername == true){
-                   Boolean insert = db.insertData(nme, addr, telephne, usrname, pass);
-                   if (insert == true){
-                       Toast.makeText(getApplicationContext(), "Registered successfully", Toast.LENGTH_SHORT).show();
-                   } else{
-                       Toast.makeText(getApplicationContext(),"Username already exists",Toast.LENGTH_SHORT).show();
-                   }
-               }
-               Toast.makeText(getApplicationContext(), "Passwords do not match", Toast.LENGTH_SHORT).show();
+        } else {
+            if (pass.equals(cpass)) {
+                Boolean chkUsername = db.chkUsername(usrname);
+                if (chkUsername == true) {
+                    if (pass.equals(cpass)) {
+                        Boolean insert = db.insertData(nme, addr, Integer.parseInt(telephne), usrname, pass);
+                        if (insert == true) {
+                            Toast.makeText(getApplicationContext(), "Registered successfully", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getApplicationContext(), "Username already exists", Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Passwords do not match", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
 
-               Intent intent = new Intent(this, userProfile.class);
 
-               intent.putExtra(Name, nme);
-               intent.putExtra(Address, addr);
-               intent.putExtra(Tel, telephne);
-               intent.putExtra(Username, usrname);
-               intent.putExtra(Password, pass);
+                Intent intent = new Intent(this, userProfile.class);
 
-               startActivity(intent);
-           }
+                intent.putExtra(Name, nme);
+                intent.putExtra(Address, addr);
+                intent.putExtra(Tel, telephne);
+                intent.putExtra(Username, usrname);
+                intent.putExtra(Password, pass);
+
+                startActivity(intent);
+            }
         }
 
-
-    }
 
     public void login(View view)
     {
@@ -85,3 +87,4 @@ public class Signup extends AppCompatActivity {
         startActivity(intent);
     }
 }
+
