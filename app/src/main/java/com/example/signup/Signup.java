@@ -55,7 +55,7 @@ public class Signup extends AppCompatActivity {
            if (pass.equals(cpass)){
                Boolean chkUsername = db.chkUsername(usrname);
                if (chkUsername == true){
-                   Boolean insert = db.insert(nme, addr, telephne, usrname, pass);
+                   Boolean insert = db.insertData(nme, addr, telephne, usrname, pass);
                    if (insert == true){
                        Toast.makeText(getApplicationContext(), "Registered successfully", Toast.LENGTH_SHORT).show();
                    } else{
