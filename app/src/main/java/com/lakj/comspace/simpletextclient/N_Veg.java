@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.lakj.comspace.simpletextclient.R;
+
 public class N_Veg extends Activity {
 
 
@@ -45,13 +47,13 @@ public class N_Veg extends Activity {
     }
     public void chicken_bbq_pizza_dec(View view) {
         if (chicken_bbq_pizza >= 0) {
-        chicken_bbq_pizza= dec(chicken_bbq_pizza);
-        TextView tv = (TextView) findViewById(R.id.chicken_BBQ_pizza_order);
+            chicken_bbq_pizza= dec(chicken_bbq_pizza);
+            TextView tv = (TextView) findViewById(R.id.chicken_BBQ_pizza_order);
             if(chicken_bbq_pizza>0) tv.setText("" + chicken_bbq_pizza);
             else tv.setText("__");
             total_cal();
 
-    }
+        }
     }
 
     public void chicken_burger_inc(View view){
@@ -233,19 +235,19 @@ public class N_Veg extends Activity {
     }
 
     public int dec(int x) {
-    if (x > 0) {
-        x--;
-        return x;
+        if (x > 0) {
+            x--;
+            return x;
+        }
+        else return 0;
     }
-    else return 0;
-}
 
 
-public int inc(int x)
-{
-   x++;
-    return (x);
-}
+    public int inc(int x)
+    {
+        x++;
+        return (x);
+    }
 
     public void orders_list_init(){
 

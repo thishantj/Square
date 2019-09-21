@@ -267,7 +267,7 @@ String q1="update current set cost="+Loading.newcost[Integer.parseInt(no)]+" whe
 int n1=iudData(q1);
 
 if(n!=0 && n1!=0)
-System.out.println("order accepted");
+System.out.println("orderSection accepted");
 
 closeData();
 Middle.notify(no);

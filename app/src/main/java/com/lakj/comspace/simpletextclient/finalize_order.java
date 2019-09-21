@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.lakj.comspace.simpletextclient.R;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -229,31 +231,31 @@ public class finalize_order extends Activity {
     public void send_ord(View v){
         order_string=fin_order_string;
 
-    EditText Ed= (EditText) findViewById(R.id.personalp);
+        EditText Ed= (EditText) findViewById(R.id.personalp);
 
-    personal_preferances=Ed.getText().toString();
+        personal_preferances=Ed.getText().toString();
 
-    final Object o = this;
-    AlertDialog.Builder builder = new AlertDialog.Builder(this);
-    builder.setMessage("Are you sure you want to confirm this order?")
-            .setCancelable(false)
-            .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int id) {
-                      messsage = "Order:" +  "|" + fin_order_string + "|" + Integer.toString(all_total)+"|"+personal_preferances;
+        final Object o = this;
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Are you sure you want to confirm this order?")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        messsage = "Order:" +  "|" + fin_order_string + "|" + Integer.toString(all_total)+"|"+personal_preferances;
                         ; // get the text message on the text field
-                   // messsage = "Order:" + SlimpleTextClientActivity.tablex + "|" + fin_order_string + "|" + Integer.toString(all_total);
+                        // messsage = "Order:" + SlimpleTextClientActivity.tablex + "|" + fin_order_string + "|" + Integer.toString(all_total);
                         SendMessage sendMessageTask = new SendMessage();
                         sendMessageTask.execute();
                         Intent nextact = new Intent((finalize_order) o, thankyou.class);
                         startActivity(nextact);
-                }
-            })
-            .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int id) {
-                    dialog.cancel();
-                }
-            });
-    AlertDialog alert = builder.create();
-    alert.show();
-}
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
 }

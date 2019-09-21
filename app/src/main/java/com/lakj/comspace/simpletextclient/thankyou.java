@@ -6,6 +6,8 @@ import android.app.Activity;
 import android.view.View;
 import android.widget.TextView;
 
+import com.lakj.comspace.simpletextclient.R;
+
 public class thankyou extends Activity {
 
 
@@ -13,7 +15,7 @@ public class thankyou extends Activity {
 
     @Override
     public void onBackPressed() {
-    // do nothing.
+        // do nothing.
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {

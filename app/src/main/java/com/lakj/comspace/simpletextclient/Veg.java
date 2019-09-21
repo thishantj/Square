@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.lakj.comspace.simpletextclient.R;
+
 public class Veg extends Activity {
 
     static int roti;
@@ -196,7 +198,7 @@ public class Veg extends Activity {
             else tv.setText("__");
 
             total_cal();
-            }
+        }
     }
 
 
@@ -227,10 +229,10 @@ public class Veg extends Activity {
         finalize_order.all_total=Starters.starters_total+Veg.total_veg+N_Veg.n_veg_total+Dessert.dessert_total;
 
         if (finalize_order.all_total > 0) {
-        TextView tv = (TextView) findViewById(R.id.veg_total_id);
-        tv.setText(""+"Rs:"+ (finalize_order.all_total));
-    }
-    else{
+            TextView tv = (TextView) findViewById(R.id.veg_total_id);
+            tv.setText(""+"Rs:"+ (finalize_order.all_total));
+        }
+        else{
             TextView tv = (TextView) findViewById(R.id.veg_total_id);
             tv.setText("");
 
@@ -259,50 +261,50 @@ public class Veg extends Activity {
         return (x);
     }
 
-        public void orders_list_init(){
-            if(roti>0) {
-                TextView tv = (TextView) findViewById(R.id.roti_order);
-                tv.setText("" + roti);
-            }
-            if(butter_roti>0) {
-                TextView tv = (TextView) findViewById(R.id.butter_roti_order);
-                tv.setText("" + butter_roti);
-            }
-
-            if(paneer_tikka>0) {
-                TextView tv = (TextView) findViewById(R.id.paneer_tikka_order);
-                tv.setText("" + paneer_tikka);
-            }
-            if(veg_pulao>0) {
-                TextView tv = (TextView) findViewById(R.id.veg_pulao_order);
-                tv.setText("" + veg_pulao);
-            }
-            if(mutter_paneer>0) {
-                TextView tv = (TextView) findViewById(R.id.mutter_paneer_order);
-                tv.setText("" + mutter_paneer);
-            }
-            if(veg_noodles>0) {
-                TextView tv = (TextView) findViewById(R.id.veg_noodles_order);
-                tv.setText("" + veg_noodles);
-            }
-            if(veg_fried_rice>0) {
-                TextView tv = (TextView) findViewById(R.id.veg_fried_rice_order);
-                tv.setText("" + veg_fried_rice);
-            }
-            if(veg_burger>0) {
-                TextView tv = (TextView) findViewById(R.id.veg_burger_order);
-                tv.setText("" + veg_burger);
-            }
-
-            if(veg_biryani>0) {
-                TextView tv = (TextView) findViewById(R.id.veg_biryani_order);
-                tv.setText("" + veg_biryani);
-            }
-            if(paneer_kofta>0) {
-                TextView tv = (TextView) findViewById(R.id.paneer_kofta_order);
-                tv.setText("" + paneer_kofta);
-            }
+    public void orders_list_init(){
+        if(roti>0) {
+            TextView tv = (TextView) findViewById(R.id.roti_order);
+            tv.setText("" + roti);
         }
+        if(butter_roti>0) {
+            TextView tv = (TextView) findViewById(R.id.butter_roti_order);
+            tv.setText("" + butter_roti);
+        }
+
+        if(paneer_tikka>0) {
+            TextView tv = (TextView) findViewById(R.id.paneer_tikka_order);
+            tv.setText("" + paneer_tikka);
+        }
+        if(veg_pulao>0) {
+            TextView tv = (TextView) findViewById(R.id.veg_pulao_order);
+            tv.setText("" + veg_pulao);
+        }
+        if(mutter_paneer>0) {
+            TextView tv = (TextView) findViewById(R.id.mutter_paneer_order);
+            tv.setText("" + mutter_paneer);
+        }
+        if(veg_noodles>0) {
+            TextView tv = (TextView) findViewById(R.id.veg_noodles_order);
+            tv.setText("" + veg_noodles);
+        }
+        if(veg_fried_rice>0) {
+            TextView tv = (TextView) findViewById(R.id.veg_fried_rice_order);
+            tv.setText("" + veg_fried_rice);
+        }
+        if(veg_burger>0) {
+            TextView tv = (TextView) findViewById(R.id.veg_burger_order);
+            tv.setText("" + veg_burger);
+        }
+
+        if(veg_biryani>0) {
+            TextView tv = (TextView) findViewById(R.id.veg_biryani_order);
+            tv.setText("" + veg_biryani);
+        }
+        if(paneer_kofta>0) {
+            TextView tv = (TextView) findViewById(R.id.paneer_kofta_order);
+            tv.setText("" + paneer_kofta);
+        }
+    }
 
     public void fin_ord(View view)
     {

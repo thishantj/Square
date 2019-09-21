@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.lakj.comspace.simpletextclient.R;
+
 public class Dessert extends Activity {
 
     static int chocolate_ice_cream;
@@ -222,8 +224,8 @@ public class Dessert extends Activity {
         dessert_total = chocolate_ice_cream * (80) + vanilla_ice_cream * (70) + strawberry_ice_cream * (75) + falooda * (150) + brownie_fudge * (120) + alpine_chocolate * (150) + devils_delight * (100) + black_forest * (80) + chocolate_lava * (180) + dutch_almond * (120);
         finalize_order.all_total = Starters.starters_total + Veg.total_veg + N_Veg.n_veg_total + Dessert.dessert_total;
         if (finalize_order.all_total > 0) {
-        TextView tv = (TextView) findViewById(R.id.dessert_tot_id);
-        tv.setText("" + "Rs:" + (finalize_order.all_total));
+            TextView tv = (TextView) findViewById(R.id.dessert_tot_id);
+            tv.setText("" + "Rs:" + (finalize_order.all_total));
 
         }
         else{
@@ -259,8 +261,8 @@ public class Dessert extends Activity {
 
 
         if (chocolate_ice_cream > 0) {
-                TextView tv = (TextView) findViewById(R.id.choco_ice_cream_order);
-                tv.setText("" + chocolate_ice_cream);
+            TextView tv = (TextView) findViewById(R.id.choco_ice_cream_order);
+            tv.setText("" + chocolate_ice_cream);
         }
         if (vanilla_ice_cream > 0) {
             TextView tv = (TextView) findViewById(R.id.vannila_ice_cream_order);
@@ -339,7 +341,7 @@ public class Dessert extends Activity {
 
             }
 
-                else{
+            else{
                 Toast.makeText(getApplicationContext(),
                         "Please select your order", Toast.LENGTH_SHORT).show();
             }

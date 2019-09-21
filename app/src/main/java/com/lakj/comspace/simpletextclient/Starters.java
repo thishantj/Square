@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.lakj.comspace.simpletextclient.R;
+
 public class Starters extends Activity {
     static int veg_crispy;
     static int chicken_crispy;
@@ -217,10 +219,10 @@ public class Starters extends Activity {
         finalize_order.all_total=Starters.starters_total+Veg.total_veg+N_Veg.n_veg_total+Dessert.dessert_total;
 
         if (finalize_order.all_total > 0) {
-        TextView tv = (TextView) findViewById(R.id.starters_tot_id);
-        tv.setText(""+"Rs:"+(finalize_order.all_total));
-            }
-    else
+            TextView tv = (TextView) findViewById(R.id.starters_tot_id);
+            tv.setText(""+"Rs:"+(finalize_order.all_total));
+        }
+        else
         {
             TextView tv = (TextView) findViewById(R.id.starters_tot_id);
             tv.setText("");

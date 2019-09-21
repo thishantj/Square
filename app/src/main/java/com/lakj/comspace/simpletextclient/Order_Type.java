@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.lakj.comspace.simpletextclient.R;
+
 public class Order_Type extends Activity {
     static int new_ord_flag=0;
     @Override
@@ -24,7 +26,7 @@ public class Order_Type extends Activity {
         finalize_order.all_total=Starters.starters_total+Veg.total_veg+N_Veg.n_veg_total+Dessert.dessert_total;
         TextView tv = (TextView) findViewById(R.id.total_on_mm);
         if(finalize_order.all_total >0){
-        tv.setText(""+"₹" + finalize_order.all_total);}
+            tv.setText(""+"₹" + finalize_order.all_total);}
     }
     public void starter(View view)
     {
@@ -89,6 +91,6 @@ public class Order_Type extends Activity {
 
         }
 
-}
+    }
 }
 

@@ -289,7 +289,7 @@ ResultSet rs=st.executeQuery("select * from current where tab="+l.getText().trim
 st=con.createStatement();
 String j=null;
 while(rs.next())
-j="insert into orders values("+rs.getInt(1)+",\'"+rs.getString(2)+"\',\'"+rs.getString(3)+"\',\'"+rs.getString(4)+"\',\'"+rs.getString(5)+"\',\'"+rs.getString(6)+"\')";
+j="insert into order values("+rs.getInt(1)+",\'"+rs.getString(2)+"\',\'"+rs.getString(3)+"\',\'"+rs.getString(4)+"\',\'"+rs.getString(5)+"\',\'"+rs.getString(6)+"\')";
 int n=st.executeUpdate(j);
 st=con.createStatement();
 n=st.executeUpdate("delete * from current where tab="+l.getText().trim().replaceAll("Table No:",""));

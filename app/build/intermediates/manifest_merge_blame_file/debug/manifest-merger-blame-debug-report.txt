@@ -1,74 +1,74 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.lakj.comspace.simpletextclient"
+3    package="com.lakj.comspace.order"
 4    android:versionCode="1"
 5    android:versionName="1.0" >
 6
 7    <uses-sdk
-7-->C:\Users\Madawa\Desktop\latest food order\Android-Food-Ordering-System-master\app\src\main\AndroidManifest.xml:7:5-47
+7-->C:\Users\Madawa\Desktop\latest food order\Food-Order\app\src\main\AndroidManifest.xml:7:5-47
 8        android:minSdkVersion="19"
-8-->C:\Users\Madawa\Desktop\latest food order\Android-Food-Ordering-System-master\app\src\main\AndroidManifest.xml:7:5-47
+8-->C:\Users\Madawa\Desktop\latest food order\Food-Order\app\src\main\AndroidManifest.xml:7:5-47
 9        android:targetSdkVersion="23" />
-9-->C:\Users\Madawa\Desktop\latest food order\Android-Food-Ordering-System-master\app\src\main\AndroidManifest.xml:7:15-44
+9-->C:\Users\Madawa\Desktop\latest food order\Food-Order\app\src\main\AndroidManifest.xml:7:15-44
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\Madawa\Desktop\latest food order\Android-Food-Ordering-System-master\app\src\main\AndroidManifest.xml:9:5-67
-11-->C:\Users\Madawa\Desktop\latest food order\Android-Food-Ordering-System-master\app\src\main\AndroidManifest.xml:9:22-64
+11-->C:\Users\Madawa\Desktop\latest food order\Food-Order\app\src\main\AndroidManifest.xml:9:5-67
+11-->C:\Users\Madawa\Desktop\latest food order\Food-Order\app\src\main\AndroidManifest.xml:9:22-64
 12    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 13    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 14    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 15
 16    <application
-16-->C:\Users\Madawa\Desktop\latest food order\Android-Food-Ordering-System-master\app\src\main\AndroidManifest.xml:15:5-43:19
+16-->C:\Users\Madawa\Desktop\latest food order\Food-Order\app\src\main\AndroidManifest.xml:15:5-43:19
 17        android:allowBackup="true"
-17-->C:\Users\Madawa\Desktop\latest food order\Android-Food-Ordering-System-master\app\src\main\AndroidManifest.xml:16:9-35
+17-->C:\Users\Madawa\Desktop\latest food order\Food-Order\app\src\main\AndroidManifest.xml:16:9-35
 18        android:debuggable="true"
 19        android:testOnly="true"
 20        android:theme="@android:style/Theme.NoTitleBar" >
-20-->C:\Users\Madawa\Desktop\latest food order\Android-Food-Ordering-System-master\app\src\main\AndroidManifest.xml:17:9-56
+20-->C:\Users\Madawa\Desktop\latest food order\Food-Order\app\src\main\AndroidManifest.xml:17:9-56
 21        <activity android:name="com.lakj.comspace.simpletextclient.Order_Type" >
-21-->C:\Users\Madawa\Desktop\latest food order\Android-Food-Ordering-System-master\app\src\main\AndroidManifest.xml:19:9-25:20
-21-->C:\Users\Madawa\Desktop\latest food order\Android-Food-Ordering-System-master\app\src\main\AndroidManifest.xml:19:19-45
+21-->C:\Users\Madawa\Desktop\latest food order\Food-Order\app\src\main\AndroidManifest.xml:19:9-25:20
+21-->C:\Users\Madawa\Desktop\latest food order\Food-Order\app\src\main\AndroidManifest.xml:19:19-45
 22            <intent-filter>
-22-->C:\Users\Madawa\Desktop\latest food order\Android-Food-Ordering-System-master\app\src\main\AndroidManifest.xml:20:13-24:29
+22-->C:\Users\Madawa\Desktop\latest food order\Food-Order\app\src\main\AndroidManifest.xml:20:13-24:29
 23                <action android:name="android.intent.action.MAIN" />
-23-->C:\Users\Madawa\Desktop\latest food order\Android-Food-Ordering-System-master\app\src\main\AndroidManifest.xml:21:17-69
-23-->C:\Users\Madawa\Desktop\latest food order\Android-Food-Ordering-System-master\app\src\main\AndroidManifest.xml:21:25-66
+23-->C:\Users\Madawa\Desktop\latest food order\Food-Order\app\src\main\AndroidManifest.xml:21:17-69
+23-->C:\Users\Madawa\Desktop\latest food order\Food-Order\app\src\main\AndroidManifest.xml:21:25-66
 24
 25                <category android:name="android.intent.category.LAUNCHER" />
-25-->C:\Users\Madawa\Desktop\latest food order\Android-Food-Ordering-System-master\app\src\main\AndroidManifest.xml:23:17-77
-25-->C:\Users\Madawa\Desktop\latest food order\Android-Food-Ordering-System-master\app\src\main\AndroidManifest.xml:23:27-74
+25-->C:\Users\Madawa\Desktop\latest food order\Food-Order\app\src\main\AndroidManifest.xml:23:17-77
+25-->C:\Users\Madawa\Desktop\latest food order\Food-Order\app\src\main\AndroidManifest.xml:23:27-74
 26            </intent-filter>
 27        </activity>
 28        <activity android:name="com.lakj.comspace.simpletextclient.Starters" >
-28-->C:\Users\Madawa\Desktop\latest food order\Android-Food-Ordering-System-master\app\src\main\AndroidManifest.xml:26:9-27:20
-28-->C:\Users\Madawa\Desktop\latest food order\Android-Food-Ordering-System-master\app\src\main\AndroidManifest.xml:26:19-43
+28-->C:\Users\Madawa\Desktop\latest food order\Food-Order\app\src\main\AndroidManifest.xml:26:9-27:20
+28-->C:\Users\Madawa\Desktop\latest food order\Food-Order\app\src\main\AndroidManifest.xml:26:19-43
 29        </activity>
 30        <activity android:name="com.lakj.comspace.simpletextclient.Veg" >
-30-->C:\Users\Madawa\Desktop\latest food order\Android-Food-Ordering-System-master\app\src\main\AndroidManifest.xml:28:9-29:20
-30-->C:\Users\Madawa\Desktop\latest food order\Android-Food-Ordering-System-master\app\src\main\AndroidManifest.xml:28:19-38
+30-->C:\Users\Madawa\Desktop\latest food order\Food-Order\app\src\main\AndroidManifest.xml:28:9-29:20
+30-->C:\Users\Madawa\Desktop\latest food order\Food-Order\app\src\main\AndroidManifest.xml:28:19-38
 31        </activity>
 32        <activity android:name="com.lakj.comspace.simpletextclient.N_Veg" >
-32-->C:\Users\Madawa\Desktop\latest food order\Android-Food-Ordering-System-master\app\src\main\AndroidManifest.xml:30:9-31:20
-32-->C:\Users\Madawa\Desktop\latest food order\Android-Food-Ordering-System-master\app\src\main\AndroidManifest.xml:30:19-40
+32-->C:\Users\Madawa\Desktop\latest food order\Food-Order\app\src\main\AndroidManifest.xml:30:9-31:20
+32-->C:\Users\Madawa\Desktop\latest food order\Food-Order\app\src\main\AndroidManifest.xml:30:19-40
 33        </activity>
 34        <activity android:name="com.lakj.comspace.simpletextclient.Dessert" >
-34-->C:\Users\Madawa\Desktop\latest food order\Android-Food-Ordering-System-master\app\src\main\AndroidManifest.xml:32:9-33:20
-34-->C:\Users\Madawa\Desktop\latest food order\Android-Food-Ordering-System-master\app\src\main\AndroidManifest.xml:32:19-42
+34-->C:\Users\Madawa\Desktop\latest food order\Food-Order\app\src\main\AndroidManifest.xml:32:9-33:20
+34-->C:\Users\Madawa\Desktop\latest food order\Food-Order\app\src\main\AndroidManifest.xml:32:19-42
 35        </activity>
 36        <activity
-36-->C:\Users\Madawa\Desktop\latest food order\Android-Food-Ordering-System-master\app\src\main\AndroidManifest.xml:35:9-38:20
+36-->C:\Users\Madawa\Desktop\latest food order\Food-Order\app\src\main\AndroidManifest.xml:35:9-38:20
 37            android:name="com.lakj.comspace.simpletextclient.finalize_order"
-37-->C:\Users\Madawa\Desktop\latest food order\Android-Food-Ordering-System-master\app\src\main\AndroidManifest.xml:36:13-43
+37-->C:\Users\Madawa\Desktop\latest food order\Food-Order\app\src\main\AndroidManifest.xml:36:13-43
 38            android:label="@string/title_activity_finalize_order" >
-38-->C:\Users\Madawa\Desktop\latest food order\Android-Food-Ordering-System-master\app\src\main\AndroidManifest.xml:37:13-66
+38-->C:\Users\Madawa\Desktop\latest food order\Food-Order\app\src\main\AndroidManifest.xml:37:13-66
 39        </activity>
 40        <activity
-40-->C:\Users\Madawa\Desktop\latest food order\Android-Food-Ordering-System-master\app\src\main\AndroidManifest.xml:39:9-42:20
+40-->C:\Users\Madawa\Desktop\latest food order\Food-Order\app\src\main\AndroidManifest.xml:39:9-42:20
 41            android:name="com.lakj.comspace.simpletextclient.thankyou"
-41-->C:\Users\Madawa\Desktop\latest food order\Android-Food-Ordering-System-master\app\src\main\AndroidManifest.xml:40:13-37
+41-->C:\Users\Madawa\Desktop\latest food order\Food-Order\app\src\main\AndroidManifest.xml:40:13-37
 42            android:label="@string/title_activity_thankyou" >
-42-->C:\Users\Madawa\Desktop\latest food order\Android-Food-Ordering-System-master\app\src\main\AndroidManifest.xml:41:13-60
+42-->C:\Users\Madawa\Desktop\latest food order\Food-Order\app\src\main\AndroidManifest.xml:41:13-60
 43        </activity>
 44    </application>
 45
