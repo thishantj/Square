@@ -75,7 +75,7 @@ public class userProfile extends AppCompatActivity {
             username.setText("");
             password.setText("");
 
-            Intent intent = new Intent(this, Login.class);
+            Intent intent = new Intent(this, Signup.class);
             startActivity(intent);
         } else {
             Toast.makeText(getApplicationContext(),"Error in deleting",Toast.LENGTH_SHORT).show();
