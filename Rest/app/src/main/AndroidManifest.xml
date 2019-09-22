@@ -9,10 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".getNew"></activity>
-        <activity android:name=".activity2" />
-        <activity android:name=".preview" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Order_summ"></activity>
+        <activity android:name=".Delivery">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

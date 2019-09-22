@@ -3,12 +3,11 @@ package com.example.rest;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class activity2 extends AppCompatActivity {
+public class Order_summ extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity2);
-        //
+        setContentView(R.layout.activity_order_summ);
     }
 }
