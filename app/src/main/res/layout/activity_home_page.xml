@@ -159,7 +159,7 @@
                 android:layout_marginTop="135dp"
                 android:background="@drawable/roundbtn4"
                 android:onClick="quotation"
-                android:text="@string/quotation"
+                android:text="@string/billingD"
                 android:textAllCaps="false"
                 android:textSize="18sp"
                 android:textStyle="bold" />

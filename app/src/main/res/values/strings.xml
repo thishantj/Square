@@ -29,6 +29,6 @@
     <string name="order">Order</string>
     <string name="reserve">Reservation</string>
     <string name="user">User Profile</string>
-    <string name="quotation">Quotation</string>
+    <string name="billingD">Billing Details</string>
     <string name="home">Home</string>
 </resources>
