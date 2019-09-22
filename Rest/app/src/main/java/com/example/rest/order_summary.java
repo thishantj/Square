@@ -19,6 +19,7 @@ import android.widget.Toast;
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_order_summ);
+
             db = new DatabaseHelper(this);
 
             name = findViewById(R.id.txtName);
@@ -44,10 +45,9 @@ import android.widget.Toast;
 
         }
 
-        public void main(View view)
-        {
-//            Intent intent = new Intent(this, home_page.class);
-//            startActivity(intent);
+        public void main(View view){
+            Intent intent = new Intent(this, Delivery.class);
+            startActivity(intent);
         }
 
         public void update(View view){
