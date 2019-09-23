@@ -54,17 +54,16 @@ public class Signup extends AppCompatActivity {
             if (pass.equals(cpass)) {
                 Boolean chkUsername = db.chkUsername(usrname);
                 if (chkUsername == true) {
-                    if (pass.equals(cpass)) {
+
                         Boolean insert = db.insertData(nme, addr, Integer.parseInt(telephne), usrname, pass);
                         if (insert == true) {
                             Toast.makeText(getApplicationContext(), "Registered successfully", Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(getApplicationContext(), "Username already exists", Toast.LENGTH_SHORT).show();
                         }
-                    } else {
-                        Toast.makeText(getApplicationContext(), "Passwords do not match", Toast.LENGTH_SHORT).show();
                     }
-                }
+                }else {
+                Toast.makeText(getApplicationContext(), "Passwords do not match", Toast.LENGTH_SHORT).show();
             }
 
 

@@ -15,7 +15,6 @@ public class home_page extends AppCompatActivity{
     }
 
 
-
     public void quotation(View view)
     {
         Intent intent = new Intent(this, Delivery.class);
