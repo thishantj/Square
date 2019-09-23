@@ -32,9 +32,7 @@
     <string name="user">User Profile</string>
     <string name="billingD">Billing Details</string>
     <string name="home">Home</string>
-
-    /Madawa
     <string name="title_activity_finalize_order">finalize_order</string>
     <string name="title_activity_thankyou">thankyou</string>
-    //Madawa
+
 </resources>

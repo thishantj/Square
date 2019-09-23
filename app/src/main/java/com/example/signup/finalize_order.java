@@ -61,7 +61,28 @@ public class finalize_order extends Activity {
         viewButton = (Button)findViewById(R.id.button14);
         AddData();
         button14();
+        deleteRow();
     }
+
+    private void deleteRow() {
+        Integer deletedRows = mydb.deleteData(Items.getText().toString());
+
+        if (deletedRows != 0){
+            Toast.makeText(getApplicationContext(),"Deleted successfully",Toast.LENGTH_SHORT).show();
+
+            Items.setText("");
+            Total_Price.setText("");
+            Personal_Preferances.setText("");
+
+
+            Intent intent = new Intent(this, Signup.class);
+            startActivity(intent);
+        } else {
+            Toast.makeText(getApplicationContext(),"Error in deleting",Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
     public void AddData(){
         sendButton.setOnClickListener(
                 new View.OnClickListener() {
@@ -254,8 +275,13 @@ public class finalize_order extends Activity {
     public void tot_v(){
         all_total=all_total+old_all_total;
         TextView tv = (TextView) findViewById(R.id.tot_p);
-        tv.setText("total price:" + "Rs:" +(finalize_order.all_total));
+        tv.setText("Total Price:" + "Rs:" +(finalize_order.all_total));
     }
+
+
+
+
+
 
 
 

@@ -1,14 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.signup.finalize_order"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/bb"
-    >
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.signup.finalize_order">
 
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/textView6"
+        android:layout_alignStart="@+id/tv"
+        android:background="@drawable/roundbtn"
+        android:onClick="main_menu"
+        android:text="Main Menu" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/textView6"
+        android:layout_alignStart="@+id/tv"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="-73dp"
+        android:background="@drawable/roundbtn"
+        android:onClick="deleteData"
+        android:text="Delete"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/button4"
+        android:layout_alignEnd="@+id/order_final"
+        android:background="@drawable/roundbtn"
+        android:onClick="send_order"
+        android:text="send order"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/button4"
+        android:layout_alignEnd="@+id/order_final"
+        android:layout_marginTop="73dp"
+        android:layout_marginEnd="6dp"
+        android:background="@drawable/roundbtn"
+        android:onClick="getAllData"
+        android:text="View all"
+        tools:ignore="OnClick" />
+
+    <EditText
+        android:id="@+id/personalp"
+        android:layout_width="243dp"
+        android:layout_height="33dp"
+        android:layout_alignEnd="@+id/tv"
+        android:layout_alignBottom="@+id/textView11"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="-38dp"
+        android:textColor="#000000"
+        android:textSize="11sp" />
 
     <TextView
         android:id="@+id/order_final"
@@ -44,7 +103,7 @@
         android:layout_marginTop="18dp"
         android:text="--"
         android:textColor="#DC143C"
-        android:textSize="20sp" />
+        android:textSize="25sp" />
 
     <TextView
         android:id="@+id/textView11"
@@ -58,17 +117,6 @@
         android:text="Personal Preferances:"
         android:textColor="#000000"
         android:textSize="18sp" />
-
-    <EditText
-        android:id="@+id/personalp"
-        android:layout_width="243dp"
-        android:layout_height="33dp"
-        android:layout_alignEnd="@+id/tv"
-        android:layout_alignBottom="@+id/textView11"
-        android:layout_marginEnd="6dp"
-        android:layout_marginBottom="-38dp"
-        android:textColor="#000000"
-        android:textSize="11sp" />
 
     <TextView
         android:id="@+id/tv"
@@ -93,37 +141,5 @@
         android:text="Please press Send order , If you want to alter your order press main menu"
         android:textColor="#000000"
         android:textSize="11sp" />
-
-    <Button
-        android:layout_width="80dp"
-        android:layout_height="40dp"
-        android:text="Main Menu"
-        android:background="@drawable/roundbtn"
-        android:onClick="main_menu"
-        android:id="@+id/button4"
-        android:layout_above="@+id/textView6"
-        android:layout_alignStart="@+id/tv" />
-    <Button
-        android:layout_width="80dp"
-        android:layout_height="40dp"
-        android:text="send order"
-        android:background="@drawable/roundbtn"
-        android:onClick="send_order"
-        android:id="@+id/button5"
-        android:layout_alignTop="@+id/button4"
-        android:layout_alignEnd="@+id/order_final"
-        tools:ignore="OnClick" />
-
-    <Button
-        android:id="@+id/button14"
-        android:layout_width="80dp"
-        android:layout_height="33dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="562dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginBottom="25dp"
-        android:background="@drawable/roundbtn"
-        android:text="View All" />
 
 </RelativeLayout>

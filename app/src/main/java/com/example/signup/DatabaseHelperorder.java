@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelperorder extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME = "square.db";
+    public static final String DATABASE_NAME = "squareOrder.db";
     public static final String TABLE_NAME = "orders";
     public static final String column_1 = "Order_ID";
     public static final String column_2 = "Items";
@@ -36,8 +36,8 @@ public class DatabaseHelperorder extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues ();
         contentValues.put(column_2,items);
-        contentValues.put(column_3,personal_preferances);
-        contentValues.put(column_4,total_price);
+        contentValues.put(column_3,total_price);
+        contentValues.put(column_4,personal_preferances);
         long result=db.insert(TABLE_NAME,null,contentValues);
         if( result == -1)
             return false;
@@ -49,4 +49,10 @@ public class DatabaseHelperorder extends SQLiteOpenHelper {
         Cursor res = db.rawQuery("select* from "+TABLE_NAME,null);
         return res;
     }
+    public Integer deleteData(String Items)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete(TABLE_NAME,"Order_ID = ?",new String[] {Items});
+    }
+
 }
