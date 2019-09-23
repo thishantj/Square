@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBHelper extends SQLiteOpenHelper {
 
-    //public static final String DATABASE_NAME ="square.db";
+    public static final String DATABASE_NAME ="square1.db";
     public static final String TABLE_NAME ="user";
     public static final String COL_1 ="name";
     public static final String COL_2 ="address";
@@ -17,7 +17,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
     public DBHelper(Context context) {
-        super(context, "square.db", null, 1);
+        super(context, "square1.db", null, 1);
     }
 
     @Override
@@ -28,7 +28,7 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
         db.execSQL("DROP TABLE IF EXISTS user");
-        //onCreate(db);
+        onCreate(db);
 
     }
 
@@ -60,15 +60,18 @@ public class DBHelper extends SQLiteOpenHelper {
         cv.put(COL_3,tel);
         cv.put(COL_4,nic);
 
-        db.update(TABLE_NAME,cv,"USERNAME = ?",new String[]{nic});
+        db.update(TABLE_NAME,cv,"NIC = ?",new String[]{nic});
         return true;
 
     }
 
-    public Integer deleteData(String username)
+
+
+
+    public Integer deleteData(String nic)
     {
         SQLiteDatabase db = this.getWritableDatabase();
-        return db.delete(TABLE_NAME,"USERNAME = ?",new String[] {username});
+        return db.delete(TABLE_NAME,"NIC = ?",new String[] {nic});
     }
 
 }

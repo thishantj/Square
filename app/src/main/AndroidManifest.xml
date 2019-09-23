@@ -13,7 +13,6 @@
         <activity android:name=".Delivery" />
         <activity android:name=".home_page" >
         </activity>
-        <activity android:name=".newAc" />
         <activity android:name=".Signup" />
         <activity android:name=".userProfile" />
         <activity android:name=".Login">

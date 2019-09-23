@@ -19,6 +19,7 @@ public class Order_Type extends Activity {
     }
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +28,10 @@ public class Order_Type extends Activity {
         TextView tv = (TextView) findViewById(R.id.total_on_mm);
         if(finalize_order.all_total >0){
             tv.setText(""+"Rs:" + finalize_order.all_total);}
+    }
+    public void home(View view) {
+        Intent intent = new Intent(this, home_page.class);
+        startActivity(intent);
     }
     public void starter(View view)
     {
