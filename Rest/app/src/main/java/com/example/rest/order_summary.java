@@ -13,14 +13,14 @@ import android.widget.Toast;
         private EditText name, address, tel, nic;
         String nme, addr, telephne, ni;
         Button update, delete;
-        DatabaseHelper db;
+        DBHelper db;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_order_summ);
 
-            db = new DatabaseHelper(this);
+            db = new DBHelper(this);
 
             name = findViewById(R.id.txtName);
             address = findViewById(R.id.txtAddress);

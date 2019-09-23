@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class Delivery extends AppCompatActivity {
 
-    DatabaseHelper db;
+    DBHelper db;
 
     public static final String Name = "name";
     public static final String Address = "address";
@@ -25,7 +25,7 @@ public class Delivery extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delivery);
 
-        db = new DatabaseHelper(this);
+        db = new DBHelper(this);
 
         name = findViewById(R.id.txtName3);
         address = findViewById(R.id.txtAddress3);
