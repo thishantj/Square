@@ -65,10 +65,10 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
-    public Integer deleteData(String username)
+    public Integer deleteData(String nic)
     {
         SQLiteDatabase db = this.getWritableDatabase();
-        return db.delete(TABLE_NAME,"USERNAME = ?",new String[] {username});
+        return db.delete(TABLE_NAME,"NIC = ?",new String[] {nic});
     }
 
 }
