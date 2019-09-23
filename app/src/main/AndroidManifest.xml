@@ -41,6 +41,8 @@
             android:name="com.example.signup.thankyou"
             android:label="@string/title_activity_thankyou" >
         </activity>
+        <activity android:name=".ViewAppointment"></activity>
+        <activity android:name=".CreateAppointment" />
     </application>
 
 </manifest>

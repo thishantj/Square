@@ -23,7 +23,7 @@ public class home_page extends AppCompatActivity{
 
     public void reservation(View view)
     {
-        Intent intent = new Intent(this, userProfile.class);
+        Intent intent = new Intent(this, CreateAppointment.class);
         startActivity(intent);
     }
 

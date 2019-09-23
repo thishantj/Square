@@ -32,6 +32,14 @@
     <string name="user">User Profile</string>
     <string name="billingD">Billing Details</string>
     <string name="home">Home</string>
+    <string name="apptid">ApptId</string>
+    <string name="apptdetails">ApptDetails</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="create">Create</string>
+    <string name="updatenew">UPDATE</string>
+    <string name="deletenew">DELETE</string>
+    <string name="homenew">Home</string>
     <string name="title_activity_finalize_order">finalize_order</string>
     <string name="title_activity_thankyou">thankyou</string>
 
