@@ -57,13 +57,12 @@ public class Delivery extends AppCompatActivity {
                     }
 
 
-            Intent intent = new Intent(this, order_summary.class);
+            Intent intent = new Intent(this, order.class);
 
             intent.putExtra(Name, nme);
             intent.putExtra(Address, addr);
             intent.putExtra(Tel, telephne);
             intent.putExtra(NIC, nic);
-
             startActivity(intent);
         }
     }
