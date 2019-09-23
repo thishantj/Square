@@ -61,6 +61,7 @@ public class userProfile extends AppCompatActivity {
         }
     }
 
+    //delete method
     public void delete(View view){
         Integer deletedRows = db.deleteData(username.getText().toString());
 
