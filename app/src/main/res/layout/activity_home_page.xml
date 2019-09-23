@@ -7,7 +7,7 @@
     android:background="@drawable/bb"
     android:orientation="vertical"
     android:weightSum="10"
-    tools:context=".HomePage">
+    tools:context=".home_page">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/relativeLayout"
@@ -79,7 +79,7 @@
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="135dp"
                 android:background="@drawable/roundbtn4"
-                android:onClick="order"
+                android:onClick="Order"
                 android:text="@string/order"
                 android:textAllCaps="false"
                 android:textSize="18sp"

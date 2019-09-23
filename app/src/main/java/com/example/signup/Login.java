@@ -50,4 +50,22 @@ public class Login extends AppCompatActivity {
 
 
     }
+
+    public void order(View view)
+    {
+        Intent intent = new Intent(this, userProfile.class);
+        startActivity(intent);
+    }
+
+    public void quotation(View view)
+    {
+        Intent intent = new Intent(this, userProfile.class);
+        startActivity(intent);
+    }
+
+    public void reservation(View view)
+    {
+        Intent intent = new Intent(this, userProfile.class);
+        startActivity(intent);
+    }
 }

@@ -54,7 +54,7 @@ public class userProfile extends AppCompatActivity {
     }
 
     public void update(View view){
-        Boolean isUpdated = db.updateData(name.getText().toString(), address.getText().toString(), Integer.parseInt(tel.getText().toString()), username.getText().toString(), password.getText().toString());
+        Boolean isUpdated = db.updateD(name.getText().toString(), address.getText().toString(), Integer.parseInt(tel.getText().toString()), username.getText().toString(), password.getText().toString());
 
         if (isUpdated == true){
             Toast.makeText(getApplicationContext(),"Updated successfully",Toast.LENGTH_SHORT).show();
@@ -66,7 +66,7 @@ public class userProfile extends AppCompatActivity {
     public void delete(View view){
         Integer deletedRows = db.deleteData(username.getText().toString());
 
-        if (deletedRows != 0){
+        if (deletedRows == 0){
             Toast.makeText(getApplicationContext(),"Deleted successfully",Toast.LENGTH_SHORT).show();
 
             name.setText("");
