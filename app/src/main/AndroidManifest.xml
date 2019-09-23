@@ -16,28 +16,28 @@
         android:allowBackup="true"
         android:theme="@android:style/Theme.NoTitleBar" >
 
-        <activity android:name=".Order_Type" >
+        <activity android:name="com.lakj.comspace.simpletextclient.Order_Type" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Starters" >
+        <activity android:name="com.lakj.comspace.simpletextclient.Starters" >
         </activity>
-        <activity android:name=".Veg" >
+        <activity android:name="com.lakj.comspace.simpletextclient.Veg" >
         </activity>
-        <activity android:name=".N_Veg" >
+        <activity android:name="com.lakj.comspace.simpletextclient.N_Veg" >
         </activity>
-        <activity android:name=".Dessert" >
+        <activity android:name="com.lakj.comspace.simpletextclient.Dessert" >
         </activity>
 
         <activity
-            android:name=".finalize_order"
+            android:name="com.lakj.comspace.simpletextclient.finalize_order"
             android:label="@string/title_activity_finalize_order" >
         </activity>
         <activity
-            android:name=".thankyou"
+            android:name="com.lakj.comspace.simpletextclient.thankyou"
             android:label="@string/title_activity_thankyou" >
         </activity>
     </application>

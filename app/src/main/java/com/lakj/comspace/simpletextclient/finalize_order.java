@@ -3,6 +3,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
@@ -21,6 +22,12 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
 public class finalize_order extends Activity {
+    DatabaseHelper mydb;
+    TextView Items, Total_Price;
+    EditText Personal_Preferances;
+    Button sendButton;
+    Button viewButton;
+
     finalize_order a=this;
     public static  Socket client;
     public static PrintWriter printwriter;
@@ -48,7 +55,62 @@ public class finalize_order extends Activity {
         setContentView(R.layout.activity_finalize_order);
         show_Order();
         tot_v();
-        oo=this;
+        oo = this;
+        mydb = new DatabaseHelper(this);
+
+        Items = (TextView) findViewById(R.id.order_final);
+        Total_Price= (TextView) findViewById(R.id.tot_p);
+        Personal_Preferances = (EditText) findViewById(R.id.personalp);
+        sendButton = (Button) findViewById(R.id.button5);
+        viewButton = (Button)findViewById(R.id.button14);
+        AddData();
+        button14();
+    }
+    public void AddData(){
+        sendButton.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        boolean isInserted = mydb.insertData(Items.getText().toString(), Total_Price.getText().toString(),
+                                                                Personal_Preferances.getText().toString());
+
+                        if (isInserted = true)
+                            Toast.makeText(finalize_order.this,"Data Inserted",Toast.LENGTH_LONG).show();
+                        else
+                            Toast.makeText(finalize_order.this,"Do not Inserted",Toast.LENGTH_LONG).show();
+                    }
+                }
+        );
+
+    }
+    public  void button14(){
+        viewButton.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                       Cursor res= mydb.getAllData();
+                       if (res.getCount()==0){
+                           //show msg
+                           return;
+                       }
+                       StringBuffer buffer=new StringBuffer();
+                       while(res.moveToNext()){
+                           buffer.append("id:"+res.getString(0)+"\n");
+                           buffer.append("Items:"+res.getString(0)+"\n");
+                           buffer.append("Personal_Preferances:"+res.getString(0)+"\n");
+                           buffer.append("Total_Price:"+res.getString(0)+"\n\n");
+                       }
+
+                    }
+                }
+        );
+    }
+    public void showMessage(String title,String Message){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(Message);
+        builder.show();
     }
 
 
@@ -201,7 +263,7 @@ public class finalize_order extends Activity {
 
 
 
-    public class SendMessage extends AsyncTask<Void, Void, Void> {
+    /*public class SendMessage extends AsyncTask<Void, Void, Void> {
         BufferedReader bb;
         Socket client;
         PrintWriter printwriter;
@@ -257,5 +319,5 @@ public class finalize_order extends Activity {
                 });
         AlertDialog alert = builder.create();
         alert.show();
-    }
+    }*/
 }
